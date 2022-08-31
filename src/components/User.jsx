@@ -14,6 +14,7 @@ function User({signOut}){
       <div className="container">
         <Card>
         <Heading level={1}>You are now loggin on as a User!</Heading>
+        <p>test</p>
         </Card>
         <Button onClick={signOut}>Sign Out</Button>
       </div>
