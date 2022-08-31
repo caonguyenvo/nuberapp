@@ -10,7 +10,6 @@ import {
   Card,
 } from "@aws-amplify/ui-react";
 function User({signOut}){
-
     return(
       <div className="container">
         <Card>
