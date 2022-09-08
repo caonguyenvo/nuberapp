@@ -19,8 +19,9 @@ function Home(){
     }
     return(
       <div className="container">
-        <h2>Home Page</h2>
+        <h1>Home Page</h1>
         <div>{renderTime()}</div>
+        <div>Please sign in as a user or a driver to start</div>
       </div>
     )
   }
