@@ -22,6 +22,7 @@ function Driver({signOut,user}){
   },[fileData])
   const uploadFile= async()=>{
       const result= await Storage.put(fileData.name, fileData,{
+          level: "private",
           contentType:fileData.type,
       });
       setFileStatus(true);
@@ -30,10 +31,11 @@ function Driver({signOut,user}){
       getAllPicture();
   }
   const getAllPicture = async()=>{
-      await Storage.list('')
+      await Storage.list('', {level:'private'})
           .then(result => {
               //reset
-              console.log("getAllpicture()");
+              //console.log("getAllpicture()",user,result);
+              console.log("getALLPictures");
               //setOutput(new Set());
               result.map(x => {
                               //setOutput(output.add(x.key))
@@ -45,7 +47,7 @@ function Driver({signOut,user}){
           .catch(err => console.log(err));;
   }
   const getPicture = async(name) =>{
-      await Storage.get(name)
+      await Storage.get(name, {level: 'private'})
       .then(result => { console.log(result);
                         setOutput(output.add(result));
                         console.log(output)
