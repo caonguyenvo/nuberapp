@@ -16,6 +16,9 @@ function App() {
       <Router>
         <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
           <div className="navbar-collapse" id="navBarNav">
+          <span className='navbar-nav pr-5'>
+            <Link className='navbar-brand disabled' to="/">Nuber</Link>
+          </span>
           <div className="navbar-nav">
             <Link className="nav-link" to="/">Home Pages</Link>
             <Link className="nav-link" to="/User">User</Link>
